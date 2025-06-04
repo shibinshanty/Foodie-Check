@@ -27,7 +27,7 @@ const EditMenu = () => {
   const loadMenus = async () => {
     const token = localStorage.getItem("token");
     try {
-      const { data } = await axios.get("http://localhost:5005/menus/all", {
+      const { data } = await axios.get("https://foodie-check-backend.onrender.com/menus/all", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setMenus(data);
@@ -44,7 +44,7 @@ const EditMenu = () => {
 
   try {
     const { data } = await axios.get(
-      `http://localhost:5005/menus/${menuId}/getitems`,
+      `https://foodie-check-backend.onrender.com/menus/${menuId}/getitems`,
       {
         headers: { Authorization: `Bearer ${token}` },
       }
@@ -66,7 +66,7 @@ const EditMenu = () => {
     };
 
     try {
-      const { data } = await axios.post("http://localhost:5005/menus/create", newMenu, {
+      const { data } = await axios.post("https://foodie-check-backend.onrender.com/menus/create", newMenu, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -105,7 +105,7 @@ const EditMenu = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:5005/menus/${selectedMenuId}/additem`,
+        `https://foodie-check-backend.onrender.com/menus/${selectedMenuId}/additem`,
         newItem,
         {
           headers: { Authorization: `Bearer ${token}` },
