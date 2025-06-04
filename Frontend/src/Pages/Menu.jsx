@@ -11,7 +11,7 @@ const Menu = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5005/menus/all", {
+      .get("https://foodie-check-backend.onrender.com/menus/all", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setMenus(res.data))
@@ -22,7 +22,7 @@ const fetchItems = async (menuId, menuName) => {
   setSelectedMenuName(menuName);
   try {
     const res = await axios.get(
-      `http://localhost:5005/menus/${menuId}/getitems`,
+      `https://foodie-check-backend.onrender.com/menus/${menuId}/getitems`,
       {
         headers: { Authorization: `Bearer ${token}` },
       }
