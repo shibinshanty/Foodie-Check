@@ -18,7 +18,7 @@ const SignUp = () => {
     };
 
     try {
-      const res = await axios.post('http://localhost:5005/user/signup', userData);
+      const res = await axios.post('https://foodie-check-backend.onrender.com/user/signup', userData);
 
       if (res.status === 201) {
         alert('Signup successful!');
