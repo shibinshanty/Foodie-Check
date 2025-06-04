@@ -20,7 +20,7 @@ const Login = () => {
     };
 
     try {
-      const res = await axios.post('http://localhost:5005/user/login', loginData);
+      const res = await axios.post('https://foodie-check-backend.onrender.com/user/login', loginData);
       if (res.status === 200) {
         alert('Login successful!');
         localStorage.setItem('token', res.data.token);
