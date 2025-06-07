@@ -25,7 +25,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 py-6 flex items-center justify-between">
         {/* Logo */}
         <div className="text-2xl font-bold flex items-center gap-2">
-          🍽️ <span>DeepNet</span>
+          🍽️ <span>Foodie Check</span>
         </div>
 
         {/* Desktop Navigation */}
